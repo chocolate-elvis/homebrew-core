@@ -1,23 +1,23 @@
 class OpensslAT11 < Formula
   desc "Cryptography and SSL/TLS Toolkit"
   homepage "https://openssl.org/"
-  url "https://www.openssl.org/source/openssl-1.1.1j.tar.gz"
-  mirror "https://dl.bintray.com/homebrew/mirror/openssl-1.1.1j.tar.gz"
-  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-1.1.1j.tar.gz"
-  sha256 "aaf2fcb575cdf6491b98ab4829abf78a3dec8402b8b81efc8f23c00d443981bf"
+  url "https://www.openssl.org/source/openssl-1.1.1k.tar.gz"
+  mirror "https://dl.bintray.com/homebrew/mirror/openssl-1.1.1k.tar.gz"
+  mirror "https://www.mirrorservice.org/sites/ftp.openssl.org/source/openssl-1.1.1k.tar.gz"
+  sha256 "892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5"
   license "OpenSSL"
   version_scheme 1
 
   livecheck do
     url "https://www.openssl.org/source/"
-    regex(/href=.*?openssl[._-]v?(1\.1(?:\.\d+)+[a-z]?)\.t/j)
+    regex(/href=.*?openssl[._-]v?(1\.1(?:\.\d+)+[a-z]?)\.t/k)
   end
 
   bottle do
-    sha256 arm64_big_sur: "cb01d17d18af475c29e87e05b8ec866b813b9f24e8a3b438efbabdf548dc5649"
-    sha256 big_sur:       "8008537d37a7f09eedbcd03c575e15206c54f97fe162c6d36da904897e9cee31"
-    sha256 catalina:      "066b9f114617872e77fa3d4afee2337daabc2c181d7564fe60a5b26d89d69742"
-    sha256 mojave:        "f5a348793735d449d990693ab687049fb11c08ade0b74c6f7337a56fc0a77908"
+    sha256 arm64_big_sur: "39a86fd4fe2e3739b60c4f9ca81752c38e32178b141dd884de197a3f284538a6"
+    sha256 big_sur:       "a5a8d1d00e26e9159d154f030cc92cf33ed3e55da470afea990773b98013b438"
+    sha256 catalina:      "ac861861a5e35505ae43b7ac8a7323494f30407263ec4ca91c457ba428126580"
+    sha256 mojave:        "dc49f2728d9358e78f8b22978c722ee0a991379d99b879183d5d40a98e6996be"
   end
 
   keg_only :shadowed_by_macos, "macOS provides LibreSSL"
